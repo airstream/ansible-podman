@@ -6,7 +6,6 @@
       - podman
     state: present
     update_cache: true
-  become: true
 
 - name: Install buildah and skopeo
   ansible.builtin.package:
@@ -15,7 +14,6 @@
       - skopeo
     state: present
     update_cache: true
-  become: true
   when: additional_software | bool
 
 - name: Set sysctl parameters
@@ -25,7 +23,6 @@
     sysctl_set: true
     state: present
     reload: true
-  become: true
   loop:
     - name: 'vm.max_map_count'
       value: '262144'
