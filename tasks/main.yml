@@ -16,6 +16,13 @@
     update_cache: true
   when: additional_software | bool
 
+- name: Install additional package procps-ng
+  ansible.builtin.package:
+    name:
+      - procps-ng
+    state: present
+    update_cache: true
+
 - name: Set sysctl parameters
   ansible.posix.sysctl:
     name: '{{ item.name }}'
