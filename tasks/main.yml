@@ -1,0 +1,33 @@
+---
+# tasks file for ansible-podman
+- name: Install podman and podman-compose
+  ansible.builtin.package:
+    name:
+      - podman
+    state: present
+    update_cache: true
+  become: true
+
+- name: Install buildah and skopeo
+  ansible.builtin.package:
+    name:
+      - buildah
+      - skopeo
+    state: present
+    update_cache: true
+  become: true
+  when: additional_software | bool
+
+- name: Set sysctl parameters
+  ansible.posix.sysctl:
+    name: '{{ item.name }}'
+    value: '{{ item.value }}'
+    sysctl_set: true
+    state: present
+    reload: true
+  become: true
+  loop:
+    - name: 'vm.max_map_count'
+      value: '262144'
+    - name: 'fs.file-max'
+      value: '65536'
