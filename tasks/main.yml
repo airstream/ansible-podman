@@ -27,9 +27,8 @@
   ansible.posix.sysctl:
     name: '{{ item.name }}'
     value: '{{ item.value }}'
-    sysctl_set: true
     state: present
-    reload: true
+    reload: false
   loop:
     - name: 'vm.max_map_count'
       value: '262144'
