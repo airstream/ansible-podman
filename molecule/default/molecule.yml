@@ -2,11 +2,7 @@
 dependency:
   name: galaxy
 driver:
-  name: delegated
-  options:
-    managed: false
-    ansible_connection_options:
-      ansible_connection: local
+  name: podman
 platforms:
   - name: instance
     image: quay.io/rockylinux/rockylinux:8.7.20221112
