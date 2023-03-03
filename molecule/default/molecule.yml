@@ -6,7 +6,7 @@ driver:
   name: podman
 platforms:
   - name: instance
-    image: quay.io/rockylinux/rockylinux:8.7.20230215-ubi
+    image: registry.redhat.io/ubi8:8.7-1090
     pre_build_image: true
 provisioner:
   name: ansible
