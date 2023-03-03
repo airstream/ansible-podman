@@ -7,8 +7,6 @@ platforms:
   - name: instance
     image: quay.io/rockylinux/rockylinux:8.7.20221112
     pre_build_image: true
-    capabilities:
-      - SYS_ADMIN
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:rw
     privileged: true
