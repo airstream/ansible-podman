@@ -6,6 +6,7 @@ driver:
 platforms:
   - name: instance
     image: quay.io/rockylinux/rockylinux:${MOLECULE_DISTRO}"
+    command: ${MOLECULE_DOCKER_COMMAND:-""}
     pre_build_image: true
 provisioner:
   name: ansible
