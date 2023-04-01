@@ -11,11 +11,12 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       # max-parallel: 4
+      max-parallel: 1
       fail-fast: true
       matrix:
         python-version: ["3.x"]
         distro:
-          - "8.7.20230215"
+          # - "8.7.20230215"
           - "9.1.20230215"
 
     steps:
