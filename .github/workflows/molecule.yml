@@ -14,8 +14,8 @@ jobs:
       matrix:
         python-version: ["3.x"]
         distro:
-          - '8.7.20230215'
-          # - '9.1.20230215'
+          - "rockylinux:8.7.20230215"
+          - "rockylinux:9.1.20230215"
 
     steps:
       - name: Check out the codebase
