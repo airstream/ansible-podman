@@ -19,7 +19,7 @@ jobs:
       - name: Set up Python 3
         uses: actions/setup-python@v3
         with:
-          python-version: ["3.x"]
+          python-version: "3.x"
 
       - name: Install yamllint dependencies
         run: pip3 install yamllint
@@ -48,7 +48,7 @@ jobs:
       - name: Set up Python 3
         uses: actions/setup-python@v3
         with:
-          python-version: ["3.x"]
+          python-version: "3.x"
 
       - name: Install molecule dependencies
         run: |
