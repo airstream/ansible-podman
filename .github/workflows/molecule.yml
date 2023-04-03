@@ -37,6 +37,8 @@ jobs:
         distro:
           - "rockylinux:8.7.20230215"
           - "rockylinux:9.1.20230215"
+          - "rockylinux:8.7.20230215-ubi"
+          - "rockylinux:9.1.20230215-ubi"
 
     steps:
       - name: Check out the codebase
