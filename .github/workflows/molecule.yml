@@ -39,8 +39,6 @@ jobs:
           - "rockylinux:9.1.20230215"
           - "rockylinux:8.7.20230215-ubi"
           - "rockylinux:9.1.20230215-ubi"
-          #- "redhat/ubi8:8.8-854"
-          #- "redhat/ubi9:9.2-489"
 
     steps:
       - name: Check out the codebase
