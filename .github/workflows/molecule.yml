@@ -35,10 +35,10 @@ jobs:
       max-parallel: 4
       matrix:
         distro:
-          - "quay.io/rockylinux/rockylinux:8.7.20230215"
-          - "quay.io/rockylinux/rockylinux:9.1.20230215"
-          - "quay.io/rockylinux/rockylinux:8.7.20230215-ubi"
-          - "quay.io/rockylinux/rockylinux:9.1.20230215-ubi"
+          - "rockylinux:8.7.20230215"
+          - "rockylinux:9.1.20230215"
+          - "rockylinux:8.7.20230215-ubi"
+          - "rockylinux:9.1.20230215-ubi"
           #- "redhat/ubi8:8.8-854"
           #- "redhat/ubi9:9.2-489"
 
