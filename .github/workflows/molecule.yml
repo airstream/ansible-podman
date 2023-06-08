@@ -53,7 +53,7 @@ jobs:
 
       - name: Install molecule dependencies
         run: |
-          pip3 install ansible molecule[podman] podman
+          pip3 install ansible molecule[podman]==4.0.4 podman
 
       - name: Run molecule test
         run: |
