@@ -55,7 +55,8 @@ jobs:
 
       - name: Install molecule dependencies
         run: |
-          pip3 install ansible molecule[podman]==4.0.4 podman==4.4.1 ansible-compat==4.0.1
+          # pip3 install ansible molecule[podman]==4.0.4 podman==4.4.1 ansible-compat==4.0.1
+          pip3 install ansible molecule[podman] podman
 
       - name: Run molecule test
         run: |
