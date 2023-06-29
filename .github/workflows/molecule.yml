@@ -32,7 +32,7 @@ jobs:
     name: Molecule
     runs-on: ubuntu-latest
     strategy:
-      max-parallel: 4
+      max-parallel: 2
       matrix:
         distro:
           - "quay.io/rockylinux/rockylinux:8.7.20230215"
@@ -55,7 +55,7 @@ jobs:
 
       - name: Install molecule dependencies
         run: |
-          pip3 install ansible molecule[podman] podman==4.4.1
+          pip3 install ansible molecule[podman]==5.0.0 podman
 
       - name: Run molecule test
         run: |
